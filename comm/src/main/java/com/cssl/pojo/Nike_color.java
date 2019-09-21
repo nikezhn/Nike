@@ -7,9 +7,7 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-/**
- * 商品颜色表
- */
+//商品颜色表
 public class Nike_color {
 
     private int nc_id;          //商品颜色编号
@@ -18,5 +16,4 @@ public class Nike_color {
     private String nc_style;    //商品款式
     private String nc_images;   //商品小图片
      private int nc_sales;      //商品销量
-
 }
