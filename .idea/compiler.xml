@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="comm" />
+        <module name="consumer-8080" />
+        <module name="eureka-6001" />
+        <module name="provider-8001" />
+        <module name="provider8002" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="comm" target="1.5" />
+      <module name="consumer-8080" target="1.5" />
+      <module name="eureka-6001" target="1.5" />
+      <module name="Nike" target="1.5" />
+      <module name="provider-8001" target="1.5" />
+      <module name="provider8002" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

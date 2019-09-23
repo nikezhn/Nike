@@ -13,6 +13,7 @@
         <module>consumer-8080</module>
         <module>eureka-6001</module>
         <module>provider-8001</module>
+        <module>provider-8002</module>
     </modules>
 
     <dependencyManagement>
