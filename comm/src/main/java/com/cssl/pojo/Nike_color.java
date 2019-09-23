@@ -17,4 +17,5 @@ public class Nike_color {
     private String nc_images;   //商品小图片
      private int nc_sales;      //商品销量
 
+
 }
