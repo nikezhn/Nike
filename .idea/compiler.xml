@@ -10,15 +10,17 @@
         <module name="consumer-8080" />
         <module name="eureka-6001" />
         <module name="provider-8001" />
+        <module name="provider-8002" />
         <module name="provider8002" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="comm" target="1.5" />
-      <module name="consumer-8080" target="1.5" />
+      <module name="consumer-8080" target="6" />
       <module name="eureka-6001" target="1.5" />
       <module name="Nike" target="1.5" />
       <module name="provider-8001" target="1.5" />
+      <module name="provider-8002" target="1.5" />
       <module name="provider8002" target="1.5" />
     </bytecodeTargetLevel>
   </component>

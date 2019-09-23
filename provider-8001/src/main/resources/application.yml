@@ -2,9 +2,9 @@ server:
   port: 8001
 
 mybatis:
-  config-location: classpath:mybatis/mybatis-cfg.xml
+  config-location: classpath:mybatis-cfg.xml
   type-aliases-package: com.cssl.pojo
-  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  mapper-locations: classpath:mapper/*.xml
 
 spring:
   application:
@@ -13,9 +13,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql:///nike
-    username: root
-    password: root
+    url: jdbc:mysql://129.204.120.11:3306/nike
+    username: kdb
+    password: 111
     dbcp2:
       min-idle: 5
       initial-size: 5
