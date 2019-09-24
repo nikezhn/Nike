@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cssl.mapper.Nike_usersMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cssl.pojo.Nike_users">
+        <id column="nu_uid" property="nu_uid" />
+        <result column="nu_phone" property="nu_phone" />
+        <result column="nu_password" property="nu_password" />
+        <result column="nu_email" property="nu_email" />
+        <result column="nu_auth" property="nu_auth" />
+        <result column="nu_state" property="nu_state" />
+    </resultMap>
+
+</mapper>

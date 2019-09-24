@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cssl.mapper.Nike_sizeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cssl.pojo.Nike_size">
+        <id column="ns_id" property="ns_id" />
+        <result column="nc_id" property="nc_id" />
+        <result column="ns_size" property="ns_size" />
+        <result column="ns_repertory" property="ns_repertory" />
+    </resultMap>
+
+</mapper>

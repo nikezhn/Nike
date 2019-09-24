@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="comm" />
         <module name="consumer-8080" />
+        <module name="consumer8081" />
         <module name="eureka-6001" />
         <module name="provider-8001" />
         <module name="provider-8002" />
@@ -17,6 +18,7 @@
     <bytecodeTargetLevel>
       <module name="comm" target="1.5" />
       <module name="consumer-8080" target="6" />
+      <module name="consumer8081" target="6" />
       <module name="eureka-6001" target="1.5" />
       <module name="Nike" target="1.5" />
       <module name="provider-8001" target="1.5" />

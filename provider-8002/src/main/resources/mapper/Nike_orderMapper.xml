@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cssl.mapper.Nike_orderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cssl.pojo.Nike_order">
+        <id column="no_id" property="no_id" />
+        <result column="nu_id" property="nu_id" />
+        <result column="np_id" property="np_id" />
+        <result column="no_date" property="no_date" />
+    </resultMap>
+
+</mapper>
