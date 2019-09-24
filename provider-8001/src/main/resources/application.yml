@@ -1,11 +1,6 @@
 server:
   port: 8001
 
-mybatis:
-  config-location: classpath:mybatis-cfg.xml
-  type-aliases-package: com.cssl.pojo
-  mapper-locations: classpath:mapper/*.xml
-
 spring:
   application:
     #微服务名
@@ -39,6 +34,27 @@ info:
   company.name: www.cssl.com
   build.artifactId: microservice
   build.version: 1.0-SNAPSHOT
+
+mybatis-plus:
+  typeAliasesPackage: cn.entiy
+  configuration:
+    map-underscore-to-camel-case: false
+    auto-mapping-behavior: full
+    use-generated-keys: true
+  global-config:
+    db-config:
+      #主键类型  id_worker:"数据库ID自增" auto+@TableId:"可以获得主键值"
+      id-type: auto
+      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+      field-strategy: not_empty
+      #驼峰下划线转换
+      column-underline: false
+      #数据库大写下划线转换
+      #capital-mode: true
+      #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+    refresh: true
 
 #spring:
 #  boot:

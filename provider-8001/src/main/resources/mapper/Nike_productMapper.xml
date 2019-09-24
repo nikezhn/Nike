@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cssl.mapper.Nike_productMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cssl.pojo.Nike_product">
+        <id column="np_id" property="np_id" />
+        <result column="np_name" property="np_name" />
+        <result column="np_describe" property="np_describe" />
+        <result column="np_brand" property="np_brand" />
+        <result column="np_price" property="np_price" />
+        <result column="npc_id" property="npc_id" />
+        <result column="npc_two_id" property="npc_two_id" />
+        <result column="npc_three_id" property="npc_three_id" />
+        <result column="np_images" property="np_images" />
+        <result column="np_color_count" property="np_color_count" />
+    </resultMap>
+
+</mapper>

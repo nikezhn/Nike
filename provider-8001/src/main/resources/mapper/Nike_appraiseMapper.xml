@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cssl.mapper.Nike_appraiseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cssl.pojo.Nike_appraise">
+        <id column="na_id" property="na_id" />
+        <result column="np_id" property="np_id" />
+        <result column="na_leave" property="na_leave" />
+        <result column="na_date" property="na_date" />
+        <result column="na_images" property="na_images" />
+        <result column="na_explain" property="na_explain" />
+    </resultMap>
+
+</mapper>
