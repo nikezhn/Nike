@@ -23,9 +23,10 @@ public class UsersController {
         return list;
     }
 
-    @RequestMapping("user")
+    @RequestMapping("/index")
     String user(){
-        return "user";
+        System.out.println("****************************");
+        return "index";
     }
 
 }
