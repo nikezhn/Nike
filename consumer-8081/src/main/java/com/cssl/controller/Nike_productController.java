@@ -19,7 +19,7 @@ public class Nike_productController {
 
         List<Nike_product> list=nike_ClientService.findAll();
         for (Nike_product product:list){
-            System.out.println("product:"+product);
+            System.out.println("product123:"+product);
         }
         return "index";
     }
