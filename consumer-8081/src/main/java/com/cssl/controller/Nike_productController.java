@@ -12,7 +12,7 @@ public class Nike_productController {
 
     @Autowired
     NikeClientService nike_ClientService;
-
+    //`
     //查询所有商品信息;
     @RequestMapping("/nike_product/findAll")
     public String index(){
