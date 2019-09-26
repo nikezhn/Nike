@@ -7,9 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @FeignClient("MICROSERVICE-DEPT")
-public interface INike_productClientService {
+public interface NikeClientService {
 
-    @RequestMapping("/nike_color/findAll")
+    @RequestMapping("/nike_product/findAll")
     public List<Nike_product> findAll();
+
+    @RequestMapping("/nike_product/product")
+    public List<Nike_product> sel();
 
 }
