@@ -35,7 +35,7 @@ public class Nike_productController {
     @RequestMapping("/product")
     public List<Nike_product> sel(){
 
-        System.out.println("查询方法");
+        System.out.println("查询方法123");
         return iNike_productService.productSel();
     }
 
