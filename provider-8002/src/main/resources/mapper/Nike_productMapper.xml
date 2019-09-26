@@ -16,4 +16,8 @@
         <result column="np_color_count" property="np_color_count" />
     </resultMap>
 
+    <select id="productSel" resultType="com.cssl.pojo.Nike_product">
+        select * from nike_product
+    </select>
+
 </mapper>

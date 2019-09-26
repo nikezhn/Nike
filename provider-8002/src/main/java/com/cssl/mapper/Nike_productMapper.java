@@ -2,6 +2,9 @@ package com.cssl.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cssl.pojo.Nike_product;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -11,7 +14,9 @@ import com.cssl.pojo.Nike_product;
  * @author aguang
  * @since 2019-09-24
  */
-
 public interface Nike_productMapper extends BaseMapper<Nike_product> {
+
+    //查询商品所有信息;
+    List<Nike_product> productSel();
 
 }

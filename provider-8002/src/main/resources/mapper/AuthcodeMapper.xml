@@ -3,7 +3,7 @@
 <mapper namespace="com.cssl.mapper.AuthcodeMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.cssl.entity.Authcode">
+    <resultMap id="BaseResultMap" type="com.cssl.pojo.Authcode">
         <id column="authcode_id" property="authcode_id" />
         <result column="authcode_name" property="authcode_name" />
     </resultMap>

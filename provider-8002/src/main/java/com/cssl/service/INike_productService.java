@@ -2,6 +2,7 @@ package com.cssl.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.cssl.pojo.Nike_product;
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +13,8 @@ import com.cssl.pojo.Nike_product;
  * @since 2019-09-24
  */
 public interface INike_productService extends IService<Nike_product> {
+
+    //查询商品所有信息;
+    List<Nike_product> productSel();
 
 }
