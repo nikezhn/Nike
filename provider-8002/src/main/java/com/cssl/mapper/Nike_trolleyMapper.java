@@ -2,6 +2,9 @@ package com.cssl.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cssl.pojo.Nike_trolley;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,5 +16,8 @@ import com.cssl.pojo.Nike_trolley;
  */
 
 public interface Nike_trolleyMapper extends BaseMapper<Nike_trolley> {
+
+    //根据用户查询购物车;
+    List<Nike_trolley> trolleyUn_id(Integer uid);
 
 }

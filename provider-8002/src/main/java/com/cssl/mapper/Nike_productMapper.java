@@ -16,7 +16,4 @@ import java.util.List;
  */
 public interface Nike_productMapper extends BaseMapper<Nike_product> {
 
-    //查询商品所有信息;
-    List<Nike_product> productSel();
-
 }

@@ -14,7 +14,4 @@ import java.util.List;
  */
 public interface INike_productService extends IService<Nike_product> {
 
-    //查询商品所有信息;
-    List<Nike_product> productSel();
-
 }

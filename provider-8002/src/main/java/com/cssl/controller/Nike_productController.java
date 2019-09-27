@@ -25,18 +25,11 @@ public class Nike_productController {
     @Autowired
     INike_productService iNike_productService;
 
-    @RequestMapping("/findAll")
-    public List<Nike_product> findAll(){
+    @RequestMapping("/productFindAll")
+    public List<Nike_product> productFindAll(){
 
-        System.out.println("进入前台nike_product的findAll方法");
+        System.out.println("8002-->Nike_productController-->productFindAll");
         return iNike_productService.list();
-    }
-
-    @RequestMapping("/product")
-    public List<Nike_product> sel(){
-
-        System.out.println("查询方法123");
-        return iNike_productService.productSel();
     }
 
 }
