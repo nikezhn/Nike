@@ -2,7 +2,7 @@
 <!--[if IE 7]><html class="ie ie7"><![endif]-->
 <!--[if IE 8]><html class="ie ie8"><![endif]-->
 <!--[if IE 9]><html class="ie ie9"><![endif]-->
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -129,10 +129,10 @@
 					  </li>
 					  <li class="menu-item"><a href="#">博客列表</a></li>
 					</ul>
-			  </li>
-			  <li class="menu-item menu-item-has-children dropdown"><a href="#">联系我们</a>
-					<ul class="sub-menu">
 					  <li class="menu-item"><a href="#">Contact Us #1</a></li>
+						</li>
+						<li class="menu-item menu-item-has-children dropdown"><a href="#">联系我们</a>
+							<ul class="sub-menu">
 					  <li class="menu-item"><a href="#">Contact Us #2</a></li>
 					</ul>
 			  </li>
@@ -143,33 +143,21 @@
 		  <input class="form-control" type="text" placeholder="Search Product…">
 		  <button><i class="ps-icon-search"></i></button>
 		</form>
-		<div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i>20</i></span><i class="ps-icon-shopping-cart"></i></a>
+		<div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i th:text="${count}">0</i></span><i class="ps-icon-shopping-cart"></i></a>
 		  <div class="ps-cart__listing">
 			<div class="ps-cart__content">
-			  <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-				<div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="images/cart-preview/1.jpg" alt=""></div>
-				<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">Amazin’ Glazin’</a>
-				  <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
-				</div>
-			  </div>
-			  <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-				<div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="images/cart-preview/2.jpg" alt=""></div>
-				<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Crusty Croissant</a>
-				  <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
-				</div>
-			  </div>
-			  <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-				<div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="images/cart-preview/3.jpg" alt=""></div>
-				<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Rolling Pin</a>
-				  <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
+			  <div class="ps-cart-item" th:each="reolley:${trolleyList}"><a class="ps-cart-item__close" href="#"></a>
+				<div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img th:src="'../images/cart-preview/'+${reolley.nt_images}" th:alt="${reolley.nt_name}" ></div>
+				<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html"><span th:text="${reolley.nt_name}"></span>--></a>
+				  <p><span>尺&nbsp;&nbsp;码:<i th:text="${reolley.nt_size}"></i></span><span>商品价格:<i>￥<span th:text="${reolley.nt_price}"></span></i></span></p>
 				</div>
 			  </div>
 			</div>
 			<div class="ps-cart__total">
-			  <p>Number of items:<span>36</span></p>
-			  <p>Item Total:<span>£528.00</span></p>
+			  <p>数&nbsp;&nbsp;量:<span>36</span></p>
+			  <p>总 金 额:￥<span>528.00</span></p>
 			</div>
-			<div class="ps-cart__footer"><a class="ps-btn" href="cart.html">Check out<i class="ps-icon-arrow-left"></i></a></div>
+			<div class="ps-cart__footer"><a class="ps-btn" href="cart.html">购&nbsp;&nbsp;买<i class="ps-icon-arrow-left"></i></a></div>
 		  </div>
 		</div>
 		<div class="menu-toggle"><span></span></div>

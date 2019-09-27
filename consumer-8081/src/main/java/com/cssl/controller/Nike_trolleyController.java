@@ -17,14 +17,14 @@ public class Nike_trolleyController {
     @Autowired
     NikeClientService nike_ClientService;
 
-    //根据用户编号查询购物车;
-    @RequestMapping(value = "/nike_trolley/trolleyUn_id")
+    /*//根据用户编号查询购物车;
+    @RequestMapping("/nike_trolley/trolleyUn_id")
     public List<Nike_trolley> trolleyUn_id(){
 
         System.out.println("8081-->Nike_trolleyController-->trolleyUn_id");
         List<Nike_trolley> list=nike_ClientService.trolleyUn_id(1);
         for (Nike_trolley trolley:list){ System.out.println("trolley:"+trolley); }
         return  list;
-    }
+    }*/
 
 }

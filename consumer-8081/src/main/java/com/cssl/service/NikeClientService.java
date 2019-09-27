@@ -16,7 +16,7 @@ import java.util.List;
 public interface NikeClientService {
 
     //查询所有商品信息;
-    @RequestMapping("/nike_product/productFindAll")
+    @RequestMapping(value = "/nike_product/productFindAll",method = RequestMethod.GET)
     List<Nike_product> productFindAll();
 
     //根据用户编号查询购物车;
