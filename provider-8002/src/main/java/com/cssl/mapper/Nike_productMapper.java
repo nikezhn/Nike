@@ -16,4 +16,7 @@ import java.util.List;
  */
 public interface Nike_productMapper extends BaseMapper<Nike_product> {
 
+    //查询8件商品信息;
+    List<Nike_product> productLimit(int npc_two_id);
+
 }

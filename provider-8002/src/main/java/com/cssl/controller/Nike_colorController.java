@@ -26,10 +26,12 @@ public class Nike_colorController {
     @Autowired
     INike_colorService iNike_colorService;
 
-    @ResponseBody
-    @RequestMapping("/findAll")
-    public List<Nike_color> findAll(){
-       return iNike_colorService.list();
+    //查询颜色所有信息;
+    @RequestMapping("/colorFindAll")
+    public List<Nike_color> colorFindAll(){
+
+        System.out.println("8002-->Nike_colorController-->colorFindAll");
+        return iNike_colorService.list();
     }
 
 }

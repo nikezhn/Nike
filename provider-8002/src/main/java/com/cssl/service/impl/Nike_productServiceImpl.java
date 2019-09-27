@@ -20,4 +20,13 @@ import java.util.List;
 @Service
 public class Nike_productServiceImpl extends ServiceImpl<Nike_productMapper, Nike_product> implements INike_productService {
 
+    @Autowired
+    Nike_productMapper nike_productMapper;
+
+    //查询8件商品信息;
+    public List<Nike_product> productLimit(int npc_two_id) {
+
+        System.out.println("8002-->Nike_productServiceImpl-->productLimit");
+        return nike_productMapper.productLimit(npc_two_id);
+    }
 }
