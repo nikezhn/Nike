@@ -43,6 +43,7 @@ public class NikeControll {
         List<Nike_color> colorList=nike_ClientService.colorFindAll();
         /*for (Nike_color color:colorList){ System.out.println("color:"+color); }*/
 
+
         //根据用户查询购物车数量
         model.addAttribute("trolleyCount",trolleyList.size());
         //商品数量
