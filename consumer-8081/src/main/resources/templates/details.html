@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*----------------------------------头部样式-----------------------------------*/
+    header{
+        margin-top: -20px;
+        width: 1900px;
+        background-color: white;
+        z-index: 8;
+        position: fixed;
+    }
+    #toubu{
+        overflow: hidden;
+        border-top: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
+    }
+    #toubuUl{
+        height: 65px;
+        margin: 0px;
+        display: inline-block;
+        list-style: none;
+    }
+
+    .shoye{
+        margin-top: 30px;
+        height: 40px;
+        color: #939393;
+        text-decoration:none;
+        font-size: 25px;
+    }
+    .k1{
+        border-left: 1px solid #E5E5E5;
+        border-right: 1px solid #E5E5E5;
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 80px;
+    }
+    .k2{
+        margin-left: 1100px;
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    .k3{
+        margin-top: 1px;
+        margin-left: 30px;
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    .k4{
+
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    .k5{
+
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    .k6{
+
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    #wo{
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 8;
+        margin-top:70px ;
+        margin-left: 1300px;
+        position: absolute;
+        list-style: none;
+        border: 1px solid #E5E5E5;
+        background-color: white;
+        color: black;
+        font-size: 12px;
+        padding-left: 25px;
+        padding-right: 80px;
+    }
+    #help{
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 3;
+        margin-top:70px ;
+        margin-left: 1375px;
+        position: absolute;
+        list-style: none;
+        border: 1px solid #E5E5E5;
+        background-color: white;
+        color: black;
+        font-size: 12px;
+        padding-left: 35px;
+        padding-right: 80px;
+    }
+    #help li{
+        height: 25px;
+    }
+    #wo li{
+        height: 25px;
+    }
+    #help li a{
+        text-decoration:none;
+        color: black;
+
+    }
+    #wo li a{
+        text-decoration:none;
+        color: black;
+
+    }
+    #wo li a:hover {
+        color:#8D8D8D;
+        text-decoration: underline;
+    }
+    #help li a:hover {
+        color:#8D8D8D;
+        text-decoration: underline;
+    }
+    /*--------------------------------------尾部样式---------------------------------------------------*/
+    #footer{
+
+        margin-left: -10px;
+        margin-right: -20px;
+        width: 100%;
+        overflow: hidden;
+        background-color: black;
+        color: white;
+        position: absolute;
+    }
+
+    #footul1{
+        margin-left: 260px;
+    }
+    #footer dd{
+
+        margin-top: 20px;
+        width: 205px;
+        display: inline-block;
+        float: left;
+    }
+    #footul1  a{
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+    }
+    #footul2{
+        padding-top: 5px;
+    }
+    #footul3{
+        padding-top: 5px;
+    }
+
+    #footul2 a{
+        text-decoration: none;
+        color: #7E7E7E;
+    }
+    #footul3 a{
+        text-decoration: none;
+        color: #7E7E7E;
+    }
+    #footul2 dl{
+
+        font-size: 12px;
+        height: 13px;
+    }
+    #footul3 dl{
+        text-decoration: none;
+        color: #7E7E7E;
+        font-size: 12px;
+        height: 13px;
+    }
+    #footerbowm{
+        overflow: hidden;
+    }
+    #footerunder{
+        overflow: hidden;
+    }
+    hr{
+        width: 1700px;
+    }
+    #footul2 a:hover{
+        color: white;
+    }
+    #footul3 a:hover{
+        color: white;
+    }
+    #footerbowm a{
+        padding-top: 0px;
+        font-size: 14px;
+        color: #7E7E7E;
+        text-decoration: none;
+    }
+    #footerbowm a:first-child{
+        margin-left: 85px;
+    }
+    #footerbowm a:nth-child(2){
+        margin-left: 945px;
+    }
+    .foota{
+        margin-left: 20px;
+    }
+    #footerbowm img{
+        padding-top:10px;
+    }
+    /*--------------------------------详情页面css----------------------------------*/
+    #imageDiv img{
+        margin-top: 3px;
+        margin-left: 3px;
+        width: 345px;
+        height: 440px;
+    }
+    #shengti{
+        width: 1050px;
+        overflow: hidden;
+        margin-left: 435px;
+    }
+    #imageDiv{
+        width: 720px;
+        display: inline-block;
+        overflow: hidden;
+        float: left;
+    }
+    form{
+        overflow: hidden;
+        padding-top: 70px;
+        z-index: 0;
+    }
+    #detailtext{
+        width: 280px;
+        display: inline-block;
+        float: left;
+
+    }
+    .detailname{
+        display: inline-block;
+        float: left;
+    }
+    .detailprice{
+        display: inline-block;
+        float: left;
+        width: 200px;
+        text-align: right;
+    }
+    #deatilimg img{
+        height: 50px;
+        width: 50px;
+    }
+    #deatilimg{
+        padding-top: 20px;
+    }
+    #chimatable{
+
+    }
+    .chimaanniu{
+        margin-top: 4px;
+        margin-left: 1px;
+        width: 84px;
+        height: 49px;
+        background-color: white;
+        border: 1px solid #DDDDDD;
+        border-radius:10px;
+    }
+    .chimaxunhuang{
+        width: 270px;
+        overflow: hidden;
+    }
+    .jiarushopp{
+        margin-top: 20px;
+        border-radius:30px;
+        height: 58px;
+        width: 263px;
+        background-image: url("../static/images/buttons/jiarushoop.png");
+        border: 1px solid black;
+    }
+    .shochangshoop{
+        margin-top: 5px;
+        border-radius:30px;
+        height: 58px;
+        width: 263px;
+        background-image: url("../static/images/buttons/shochang.png");
+        border: 1px solid black;
+    }
+    .chimaxunhuang ul{
+        font-size: 14px;
+
+    }
+    .chimaxunhuang li{
+       line-height: 30px;
+    }
+    .chimaxunhuang li:first-child{
+        margin-left: -20px;
+        list-style: none;
+    }
+
+
+</style>
+<script src="../static/js/jquery.min.js"></script>
+<script type="text/javascript">
+    /*-----------------------------------------------头部js------------------------------------------------------*/
+    $(function () {
+        $("#wo").hide();
+        $(".k2").hover(function (){
+            $("#wo").show();
+        },function (){
+            $("#wo").hide();
+        });
+        $("#wo").hover(function (){
+            $("#wo").show();
+        },function (){
+            $("#wo").hide();
+        });
+
+        $("#help").hide();
+        $(".k3").hover(function (){
+            $("#help").show();
+        },function (){
+            $("#help").hide();
+        });
+        $("#help").hover(function (){
+            $("#help").show();
+        },function (){
+            $("#help").hide();
+        });
+
+    })
+    /*---------------------------------------------------------------------------------------------------------*/
+</script>
+
+<body>
+<header>
+    <ul id="wo">
+        <li id="lll"><a href="">收件箱</a></li>
+        <li><a href="">订单</a></li>
+        <li><a href="">收藏</a></li>
+        <li><a href="">活动</a></li>
+        <li><a href="">账户设置</a></li>
+        <li><a href="">注销</a></li>
+    </ul>
+    <ul id="help">
+        <li><a href="">我的订单</a></li>
+        <li><a href="">配送服务</a></li>
+        <li><a href="">退换货</a></li>
+        <li><a href="">使用条款</a></li>
+        <li><a href="">销售条款</a></li>
+        <li><a href="">隐私政策</a></li>
+        <li><a href="">联系我们</a></li>
+        <li><a href="">网站反馈</a></li>
+        <li><a href="">查看全部</a></li>
+    </ul>
+    <div id="toubu">
+        <img src="../static/images/buttons/nike.png" height="62" width="95"/>
+        <ul id="toubuUl">
+            <li class="k1">
+                <a class="shoye" href="">首页</a>
+            </li>
+            <li class="k2">
+                <a class="shoye"  href=""><img src="../static/images/buttons/User.png" height="37" width="79"/></a>
+
+            </li>
+            <li class="k3">
+                <a class="shoye"  href=""><img src="../static/images/buttons/bangzhu.png" height="35" width="52"/></a>
+
+            </li>
+            <li class="k4">
+                <a class="shoye"  href=""><img src="../static/images/buttons/liaotian.png" height="39" width="39"/></a>
+            </li>
+            <li class="k5">
+                <a class="shoye"  href=""><img src="../static/images/buttons/shopp.png" height="38" width="39"/></a>
+            </li>
+            <li class="k6">
+                <a class="shoye"  href=""><img src="../static/images/buttons/adress.png" height="36" width="93"/></a>
+            </li>
+        </ul>
+    </div>
+</header>
+<form>
+    <div id="shengti">
+        <div id="imageDiv">
+            <img src="../static/images/buttons/Kobe AD NXT FF 灰黑3.jpg" />
+            <img src="../static/images/buttons/Kobe AD NXT FF 灰黑3.jpg"/>
+            <img src="../static/images/buttons/Kobe AD NXT FF 灰黑3.jpg" />
+            <img src="../static/images/buttons/Kobe AD NXT FF 灰黑3.jpg"/>
+        </div>
+        <div id="detailtext">
+            <p class="detailname">男子球鞋</p><p  class="detailprice"><span>￥1,599</span></p>
+            <h4>LeBron XVII EP</h4>
+            <div id="deatilimg">
+                <img src="../static/images/buttons/Kobe AD NXT FF 灰黑3.jpg" />
+                <img src="../static/images/buttons/Kobe AD NXT FF 灰黑3.jpg"/>
+                <img src="../static/images/buttons/Kobe AD NXT FF 灰黑3.jpg" />
+                <img src="../static/images/buttons/Kobe AD NXT FF 灰黑3.jpg"/>
+            </div>
+            <div id="chimatable">
+                <p class="detailname">选择尺码</p><p  class="detailprice"><span>尺码表</span></p>
+                <div class="chimaxunhuang">
+                    <input type="button" class="chimaanniu" value="EU 36">
+                    <input type="button" class="chimaanniu" value="EU 36.5">
+                    <input type="button" class="chimaanniu" value="EU 37">
+                    <input type="button" class="chimaanniu" value="EU 37.5">
+                    <input type="button" class="chimaanniu" value="EU 36">
+                    <input type="button" class="chimaanniu" value="EU 36.5">
+                    <input type="button" class="chimaanniu" value="EU 37">
+                    <input type="button" class="chimaanniu" value="EU 37.5">
+                </div>
+                <div class="chimaxunhuang">
+                    <input type="submit" class="jiarushopp" value="">
+                    <input type="submit" class="shochangshoop" value="">
+                </div>
+                <div class="chimaxunhuang">
+                    <ul>
+                        <li>LeBron XVII EP 篮球鞋依托勒布朗的力量和速度，塑就出众包覆性和支撑力，助你制霸赛场。组合缓震设计，为勒布朗带来出色减震支撑效果和灵敏响应回弹能量，助力畅享漫长赛季。</li><br/>
+                        <li>显示颜色： 黑/茄紫/阿马里洛黄/白色</li>
+                        <li>款式： BQ3178-004</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+<footer id="footer">
+    <div id="footerunder">
+        <dd id="footul1">
+            <dl><a href="">电子礼品卡</a></dl>
+            <dl><a href="">企业团购</a></dl>
+            <dl><a href="">附近商店</a></dl>
+            <dl><a href="">订阅电子邮件</a></dl>
+            <dl><a href="">注册NIKE会员</a></dl>
+            <dl><a href="">网站反馈</a></dl>
+        </dd>
+        <dd id="footul2">
+            <dl ><a  style="color: white;font-size: 15px" href="">获取帮助</a></dl>
+            <dl><a href="">订单状态</a></dl>
+            <dl><a href="">配送方式</a></dl>
+            <dl><a href="">退换货</a></dl>
+            <dl><a href="">付款选项</a></dl>
+            <dl><a href="">联系我们</a></dl>
+        </dd>
+        <dd id="footul3">
+            <dl><a  style="color: white;font-size: 15px" href="">关于Nike</a></dl>
+            <dl><a href="">新闻</a></dl>
+            <dl><a href="">投资者</a></dl>
+            <dl><a href="">招贤纳士</a></dl>
+            <dl><a href="">新品预览</a></dl>
+        </dd>
+    </div>
+    <br/>
+    <div id="footerbowm">
+        <hr/>
+        <p>
+            <a href="">@2019 Nike,Inc .保留所以权利</a>
+            <a href="" class="foota">分类浏览</a>
+            <a href="" class="foota">使用条款</a>
+            <a href="" class="foota">销售条款</a>
+            <a href="" class="foota">隐私政策</a>
+            <a href="" class="foota">沪ICP备14009339号</a>
+            <a href="" class="foota"><img src="../static/images/buttons/biaozi.png" height="18" width="23"/>上海工商</a>
+        </p>
+    </div>
+
+</footer>
+</body>
+</html>
