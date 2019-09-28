@@ -26,7 +26,7 @@ public class Nike_trolleyController {
 
     //根据用户查询购物车;
     @RequestMapping("/trolleyUn_id")
-    public List<Nike_trolley> trolleyUn_id(Integer uid){
+    public List<Nike_trolley> trolleyUn_id(int uid){
 
         System.out.println("8002-->Nike_trolleyController-->trolleyUn_id");
         return iNike_trolleyService.trolleyUn_id(uid);

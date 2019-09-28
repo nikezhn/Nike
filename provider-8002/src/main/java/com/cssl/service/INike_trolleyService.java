@@ -16,6 +16,6 @@ import java.util.List;
 public interface INike_trolleyService extends IService<Nike_trolley> {
 
     //根据用户查询购物车;
-    List<Nike_trolley> trolleyUn_id(Integer uid);
+    List<Nike_trolley> trolleyUn_id(int uid);
 
 }

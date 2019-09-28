@@ -2,6 +2,12 @@ server:
   port: 8080
 
 spring:
+  #静态文件请求匹配方式
+  mvc:
+    static-path-pattern: /**
+  #修改默认的静态寻址资源目录
+  resources:
+    static-locations: classpath:/templates/,classpath:/resources/,classpath:/static/
   thymeleaf:
     encoding: UTF-8
     #开发时关闭缓存,不然没法看到实时页面
@@ -10,12 +16,7 @@ spring:
     suffix: .html
   application:
     name: microservice-consumer
-  #静态文件请求匹配方式
-  mvc:
-    static-path-pattern: /**
-  #修改默认的静态寻址资源目录
-  resources:
-    static-locations: classpath:/templates/,classpath:/resources/,classpath:/static/
+
 eureka:
   client:
     register-with-eureka: true

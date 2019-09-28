@@ -6,8 +6,7 @@
     <resultMap id="BaseResultMap" type="com.cssl.pojo.Nike_order_detail">
         <id column="nod_id" property="nod_id" />
         <result column="no_id" property="no_id" />
-        <result column="nda_id" property="nda_id" />
-        <result column="nod_state" property="nod_state" />
+        <result column="np_id" property="np_id" />
         <result column="node_total_money" property="node_total_money" />
     </resultMap>
 

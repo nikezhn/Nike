@@ -16,4 +16,13 @@
         <result column="np_color_count" property="np_color_count" />
     </resultMap>
 
+    <select id="findNike_product" resultMap="BaseResultMap" parameterType="String">
+        select * from nike_product
+        <where>
+            <if test="np_name !='默认'">
+                np_name like concat('%' ,#{np_name},'%' )
+            </if>
+        </where>
+    </select>
+
 </mapper>

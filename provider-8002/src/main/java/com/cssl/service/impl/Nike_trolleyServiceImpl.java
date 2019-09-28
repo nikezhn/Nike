@@ -24,7 +24,7 @@ public class Nike_trolleyServiceImpl extends ServiceImpl<Nike_trolleyMapper, Nik
     Nike_trolleyMapper nike_trolleyMapper;
 
     //根据用户查询购物车;
-    public List<Nike_trolley> trolleyUn_id(Integer uid) {
+    public List<Nike_trolley> trolleyUn_id(int uid) {
 
         System.out.println("8002-->Nike_trolleyServiceImpl-->trolleyUn_id");
         return nike_trolleyMapper.trolleyUn_id(uid);

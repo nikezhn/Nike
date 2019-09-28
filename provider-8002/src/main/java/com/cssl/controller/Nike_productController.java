@@ -25,11 +25,12 @@ public class Nike_productController {
     @Autowired
     INike_productService iNike_productService;
 
-    @RequestMapping("/productFindAll")
-    public List<Nike_product> productFindAll(){
+    //查询8件商品信息;
+    @RequestMapping("/productLimit")
+    public List<Nike_product> productLimit(int npc_two_id){
 
-        System.out.println("8002-->Nike_productController-->productFindAll");
-        return iNike_productService.list();
+        System.out.println("8002-->Nike_productController-->productLimit");
+        return iNike_productService.productLimit(npc_two_id);
     }
 
 }

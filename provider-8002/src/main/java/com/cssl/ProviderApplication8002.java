@@ -11,6 +11,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class ProviderApplication8002 {
 
     public static void main(String[] args)	{
+
         SpringApplication.run(ProviderApplication8002.class, args);
     }
 

@@ -15,7 +15,7 @@
     </resultMap>
 
     <!-- 根据用户购物车查询 -->
-    <select id="trolleyUn_id" parameterType="Integer" resultMap="BaseResultMap">
+    <select id="trolleyUn_id" parameterType="int" resultMap="BaseResultMap">
         SELECT * FROM nike_trolley where nu_id=#{uid}
     </select>
 

@@ -9,4 +9,7 @@
         <result column="npc_parent_id" property="npc_parent_id" />
     </resultMap>
 
+    <select id="findNike_product_category" resultMap="BaseResultMap">
+        SELECT * FROM nike_product_category ORDER BY npc_parent_id,npc_id
+    </select>
 </mapper>
