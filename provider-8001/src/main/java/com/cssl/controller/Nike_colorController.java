@@ -1,6 +1,7 @@
 package com.cssl.controller;
 
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.cssl.pojo.Nike_color;
 import com.cssl.service.INike_colorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ import java.util.List;
  * @author aguang
  * @since 2019-09-24
  */
-@Controller
+@RestController
 @RequestMapping("/nike_color")
 public class Nike_colorController {
 
@@ -29,7 +30,8 @@ public class Nike_colorController {
     @RequestMapping("/findAll")
     public List<Nike_color> findAll(){
         System.out.println("进入后台nike_color的findAll方法");
-        return iNike_colorService.list();
+        List<Nike_color> list = iNike_colorService.list();
+        return list;
     }
 
     @RequestMapping("/add")

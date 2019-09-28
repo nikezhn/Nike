@@ -2,7 +2,6 @@ package com.cssl.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cssl.pojo.Nike_trolley;
-import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>

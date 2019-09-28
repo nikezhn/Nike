@@ -6,6 +6,7 @@ import com.cssl.service.INike_delivery_addressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ import java.util.List;
  * @author aguang
  * @since 2019-09-24
  */
-@Controller
+@RestController
 @RequestMapping("/nike_delivery_address")
 public class Nike_delivery_addressController {
 

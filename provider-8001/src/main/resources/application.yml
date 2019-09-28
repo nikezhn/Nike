@@ -36,7 +36,7 @@ info:
   build.version: 1.0-SNAPSHOT
 
 mybatis-plus:
-  typeAliasesPackage: cn.entiy
+  typeAliasesPackage: com.cssl.pojo
   configuration:
     map-underscore-to-camel-case: false
     auto-mapping-behavior: full

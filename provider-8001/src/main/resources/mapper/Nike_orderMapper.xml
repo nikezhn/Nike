@@ -3,11 +3,13 @@
 <mapper namespace="com.cssl.mapper.Nike_orderMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.cssl.pojo.Nike_order">
+    <resultMap id="BaseResultMap" type="com.cssl.entity.Nike_order">
         <id column="no_id" property="no_id" />
         <result column="nu_id" property="nu_id" />
-        <result column="np_id" property="np_id" />
         <result column="no_date" property="no_date" />
+        <result column="daid" property="daid" />
+        <result column="no_state" property="no_state" />
+        <result column="no_status" property="no_status" />
     </resultMap>
 
 </mapper>
