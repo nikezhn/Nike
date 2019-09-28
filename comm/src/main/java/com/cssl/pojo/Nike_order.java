@@ -1,11 +1,10 @@
-package com.cssl.pojo;
+package com.cssl.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
-
-import java.io.Serializable;
-import java.util.Date;
+    import com.baomidou.mybatisplus.annotation.IdType;
+    import com.baomidou.mybatisplus.extension.activerecord.Model;
+    import com.baomidou.mybatisplus.annotation.TableId;
+    import java.time.LocalDateTime;
+    import java.io.Serializable;
 
 /**
 * <p>
@@ -13,7 +12,7 @@ import java.util.Date;
     * </p>
 *
 * @author aguang
-* @since 2019-09-24
+* @since 2019-09-28
 */
     public class Nike_order extends Model<Nike_order> {
 
@@ -31,14 +30,24 @@ import java.util.Date;
     private Integer nu_id;
 
             /**
-            * 商品编号
-            */
-    private Integer np_id;
-
-            /**
             * 订单时间
             */
-    private Date no_date;
+    private LocalDateTime no_date;
+
+            /**
+            * 地址编号
+            */
+    private Integer daid;
+
+            /**
+            * 支付状态,0:付款处理中,1:支付成功;
+            */
+    private Integer no_state;
+
+            /**
+            * 订单状态
+            */
+    private Integer no_status;
 
         public Integer getNo_id() {
         return no_id;
@@ -54,19 +63,33 @@ import java.util.Date;
             public void setNu_id(Integer nu_id) {
         this.nu_id = nu_id;
         }
-        public Integer getNp_id() {
-        return np_id;
-        }
-
-            public void setNp_id(Integer np_id) {
-        this.np_id = np_id;
-        }
-        public Date getNo_date() {
+        public LocalDateTime getNo_date() {
         return no_date;
         }
 
-            public void setNo_date(Date no_date) {
+            public void setNo_date(LocalDateTime no_date) {
         this.no_date = no_date;
+        }
+        public Integer getDaid() {
+        return daid;
+        }
+
+            public void setDaid(Integer daid) {
+        this.daid = daid;
+        }
+        public Integer getNo_state() {
+        return no_state;
+        }
+
+            public void setNo_state(Integer no_state) {
+        this.no_state = no_state;
+        }
+        public Integer getNo_status() {
+        return no_status;
+        }
+
+            public void setNo_status(Integer no_status) {
+        this.no_status = no_status;
         }
 
     @Override
@@ -79,8 +102,10 @@ import java.util.Date;
     return "Nike_order{" +
             "no_id=" + no_id +
             ", nu_id=" + nu_id +
-            ", np_id=" + np_id +
             ", no_date=" + no_date +
+            ", daid=" + daid +
+            ", no_state=" + no_state +
+            ", no_status=" + no_status +
     "}";
     }
 }

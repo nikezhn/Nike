@@ -1,10 +1,9 @@
-package com.cssl.pojo;
+package com.cssl.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
-
-import java.io.Serializable;
+    import com.baomidou.mybatisplus.annotation.IdType;
+    import com.baomidou.mybatisplus.extension.activerecord.Model;
+    import com.baomidou.mybatisplus.annotation.TableId;
+    import java.io.Serializable;
 
 /**
 * <p>
@@ -12,7 +11,7 @@ import java.io.Serializable;
     * </p>
 *
 * @author aguang
-* @since 2019-09-24
+* @since 2019-09-28
 */
     public class Nike_order_detail extends Model<Nike_order_detail> {
 
@@ -30,14 +29,9 @@ import java.io.Serializable;
     private String no_id;
 
             /**
-            * 送货地址编号
+            * 商品编号
             */
-    private Integer nda_id;
-
-            /**
-            * 支付状态,0:付款处理中,1:支付成功;
-            */
-    private String nod_state;
+    private Integer np_id;
 
             /**
             * 总金额
@@ -58,19 +52,12 @@ import java.io.Serializable;
             public void setNo_id(String no_id) {
         this.no_id = no_id;
         }
-        public Integer getNda_id() {
-        return nda_id;
+        public Integer getNp_id() {
+        return np_id;
         }
 
-            public void setNda_id(Integer nda_id) {
-        this.nda_id = nda_id;
-        }
-        public String getNod_state() {
-        return nod_state;
-        }
-
-            public void setNod_state(String nod_state) {
-        this.nod_state = nod_state;
+            public void setNp_id(Integer np_id) {
+        this.np_id = np_id;
         }
         public Double getNode_total_money() {
         return node_total_money;
@@ -90,8 +77,7 @@ import java.io.Serializable;
     return "Nike_order_detail{" +
             "nod_id=" + nod_id +
             ", no_id=" + no_id +
-            ", nda_id=" + nda_id +
-            ", nod_state=" + nod_state +
+            ", np_id=" + np_id +
             ", node_total_money=" + node_total_money +
     "}";
     }

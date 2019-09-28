@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结算</title>
+
+</head>
+
+<style>
+
+    #title{
+        margin-left: 400px;
+        font-size: 36px;
+    }
+    #neiron1{
+        font-size: 13px;
+        height: 70px;
+        padding-top: 20px;
+        padding-left: 20px;
+        width: 530px;
+        background-color: #E5E5E5;
+    }
+    #neiron2{
+        color: red;
+        font-size: 13px;
+        height: 110px;
+        padding-top: 20px;
+        padding-left: 20px;
+        width: 530px;
+        background-color: #E5E5E5;
+    }
+    #peison{
+        width:550px;  border: 1px solid #E5E5E5;
+        overflow: hidden;
+    }
+    dd{
+        width:550px;
+    }
+    .peisontitle{
+        width:541px ;
+        padding-left: 10px;
+        padding-top: 10px;
+        height: 45px;
+        font-size: 22px;
+        color: white;
+        margin-top: 0px;
+        background-color: black;
+    }
+    .input{
+        width: 470px;
+        height: 30px;
+    }
+    .SPtitle{
+        font-size: 14px;
+    }
+    #chenstitle{
+        margin-left: 136px;
+    }
+    #xiantitle{
+        margin-left: 137px;
+    }
+    #shen{
+        width: 145px;
+        height: 30px;
+    }
+    #chenshi{
+        margin-left: 15px;
+        width: 145px;
+        height: 30px;
+    }
+    #xian{
+        margin-left: 15px;
+        width: 145px;
+        height: 30px;
+    }
+    #phonetitle{
+        margin-left: 190px;
+    }
+    #email{
+        width: 220px;
+    }
+    #phone{
+        margin-left: 20px;
+        width: 227px;
+    }
+    .tishi{
+        font-size: 12px;
+        color: red;
+    }
+    #tishiPhone{
+        margin-left: 87px;
+    }
+    #chenstishi{
+        margin-left: 88px;
+    }
+    #xiantishi{
+        margin-left: 51px;
+    }
+    #tijiao{
+        margin-left: 365px;
+        width: 111px;
+        height: 39px;
+        border: none;
+        background-image: url("../static/images/buttons/tijiao.png");
+    }
+    .dindang{
+        position: absolute;
+        margin-left: 475px;
+    }
+    /*************************/
+
+
+    /*---------------------------------------------------------------------*/
+    #H1{
+        font-family: SimSun-ExtB;
+        display: inline-block;
+        width: 200px;
+        text-align:right
+    }
+    #H2{
+        font-family: SimSun-ExtB;
+        display: inline-block;
+        width: 120px;
+        text-align:right
+    }
+    #H3{
+        font-size: 20px;
+        font-family: SimSun-ExtB;
+        display: inline-block;
+        width: 200px;
+        color: red;
+        text-align:right
+    }
+    .body2{
+        border: 1px solid #E5E5E5;
+        margin-top: 13px;
+        width: 350px;
+        height: 180px;
+
+    }
+    .body3{
+        border: 1px solid #E5E5E5;
+        margin-top: 13px;
+        width: 350px;
+        overflow: hidden;
+
+    }
+    .lefthtml{
+        position: absolute;
+        display: inline-block;
+        float: left;
+    }
+    .rigthhtml{
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 580px;
+        display: inline-block;
+        float: left;
+    }
+    .zaiyaotitle{
+        padding-left: 10px;
+        padding-top: 10px;
+        height: 45px;
+        font-size: 22px;
+        color: black;
+        margin-top: 0px;
+        background-color: #E5E5E5;
+    }
+    .e{
+        margin-top: 0;
+        height: 10px;
+    }
+
+    #dd2{
+        margin-left: 35px;
+    }
+    .shopp1{
+        margin-left: 20px;
+        display: inline-block;
+        float: left;
+    }
+    .shopp2{
+
+        margin-left: 10px;
+
+        width: 210px;
+        display: inline-block;
+        float: left;
+    }
+
+    #Edit{
+        color: black;
+        font-size: 15px;
+        margin-left: 150px;
+    }
+    .shopp-dd{
+        width: 200px;
+        margin-left: 10px;
+        margin-top: -20px;
+    }
+    .e2{
+
+        height: 10px;
+        font-size: 10px;
+    }
+    .dizhi{
+        height: 100px;
+        margin-left: 20px;
+        width: 500px;
+        border: 1px solid black;
+
+    }
+    .xuanzhe{
+
+
+        margin-top: 39px;
+        margin-left: 20px;
+        display: inline-block;
+        float: left;
+
+    }
+    .xingxi{
+        font-size: 12px;
+        display: inline-block;
+        float: left;
+        padding-left: 0px;
+        width: 450px;
+    }
+    .xinxidd{
+        width: 450px;
+        margin-left: 10px;
+    }
+    .bianji{
+        margin-left: 290px;
+    }
+    .dindantis{
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    .fukuan{
+        background-image: url("../static/images/buttons/fukuan.png");
+        width: 98px;
+        height: 39px;
+        border: none;
+        margin-left: 425px;
+    }
+    .dizhi2{
+        margin-bottom: 10px;
+    }
+    .xdztitle{
+        margin-left: 40px;
+    }
+    .xdzdd{
+        color: #6D6D6D;
+        font-size: 14px;
+    }
+    .xdztime{
+        margin-left: 40px;
+    }
+    .bianjidiz{
+        color: white;
+        font-size: 15px;
+        margin-left: 420px;
+    }
+    .zfb{
+        margin-left: 20px;
+        background-image: url("../static/images/buttons/zfb.png");
+        width: 106px;
+        height: 49px;
+        border: 1px solid #DDDDDD;
+    }
+    .weixin{
+        margin-left: 20px;
+        background-image: url("../static/images/buttons/weixin.png");
+        width: 106px;
+        height: 49px;
+        border: 1px solid #DDDDDD;
+    }
+    .yhk{
+        margin-left: 20px;
+        background-image: url("../static/images/buttons/yhk.png");
+        width: 106px;
+        height: 49px;
+        border: 1px solid #DDDDDD;
+    }
+    .xzfukuan{
+        width: 550px;
+        border: 1px solid #DDDDDD;
+        overflow: hidden;
+    }
+    .fukuantishi{
+        margin-left: 20px;
+        font-size: 12px;
+        color: #6D6D6D;
+    }
+    .xiadan{
+        margin-left: 425px;
+        margin-bottom: 10px;
+        width: 109px;
+        height: 40px;
+        border: none;
+        background-image: url("../static/images/buttons/xaidananniu.png");
+    }
+    /*----------------------------------头部样式-----------------------------------*/
+    form{
+        padding-top: 70px;
+        z-index: 0;
+    }
+  header{
+      margin-top: -20px;
+      width: 1900px;
+      background-color: white;
+      z-index: 8;
+      position: fixed;
+  }
+    #toubu{
+        overflow: hidden;
+        border-top: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
+    }
+    #toubuUl{
+        height: 65px;
+        margin: 0px;
+        display: inline-block;
+        list-style: none;
+    }
+
+    .shoye{
+        margin-top: 30px;
+        height: 40px;
+        color: #939393;
+        text-decoration:none;
+        font-size: 25px;
+    }
+    .k1{
+        border-left: 1px solid #E5E5E5;
+        border-right: 1px solid #E5E5E5;
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 80px;
+    }
+    .k2{
+        margin-left: 1100px;
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    .k3{
+        margin-top: 1px;
+        margin-left: 30px;
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    .k4{
+
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    .k5{
+
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    .k6{
+
+        padding-top: 20px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        height:65px;
+        width: 60px;
+    }
+    #wo{
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 8;
+        margin-top:70px ;
+        margin-left: 1300px;
+        position: absolute;
+        list-style: none;
+        border: 1px solid #E5E5E5;
+        background-color: white;
+        color: black;
+        font-size: 12px;
+        padding-left: 25px;
+        padding-right: 80px;
+    }
+    #help{
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 3;
+        margin-top:70px ;
+        margin-left: 1375px;
+        position: absolute;
+        list-style: none;
+        border: 1px solid #E5E5E5;
+        background-color: white;
+        color: black;
+        font-size: 12px;
+        padding-left: 35px;
+        padding-right: 80px;
+    }
+    #help li{
+        height: 25px;
+    }
+    #wo li{
+        height: 25px;
+    }
+    #help li a{
+        text-decoration:none;
+        color: black;
+
+    }
+    #wo li a{
+        text-decoration:none;
+        color: black;
+
+    }
+    #wo li a:hover {
+        color:#8D8D8D;
+        text-decoration: underline;
+    }
+    #help li a:hover {
+        color:#8D8D8D;
+        text-decoration: underline;
+    }
+    /*--------------------------------------尾部样式---------------------------------------------------*/
+    #footer{
+
+        margin-left: -10px;
+        margin-right: -20px;
+        width: 100%;
+        overflow: hidden;
+        background-color: black;
+        color: white;
+        margin-top: 900px;
+        position: absolute;
+    }
+
+    #footul1{
+        margin-left: 260px;
+    }
+    #footer dd{
+
+        margin-top: 20px;
+        width: 205px;
+        display: inline-block;
+        float: left;
+    }
+    #footul1  a{
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+    }
+    #footul2{
+        padding-top: 5px;
+    }
+    #footul3{
+        padding-top: 5px;
+    }
+
+    #footul2 a{
+        text-decoration: none;
+        color: #7E7E7E;
+    }
+    #footul3 a{
+        text-decoration: none;
+        color: #7E7E7E;
+    }
+    #footul2 dl{
+
+        font-size: 12px;
+        height: 13px;
+    }
+    #footul3 dl{
+        text-decoration: none;
+        color: #7E7E7E;
+        font-size: 12px;
+        height: 13px;
+    }
+    #footerbowm{
+        overflow: hidden;
+    }
+    #footerunder{
+        overflow: hidden;
+    }
+    hr{
+        width: 1700px;
+    }
+    #footul2 a:hover{
+        color: white;
+    }
+    #footul3 a:hover{
+        color: white;
+    }
+    #footerbowm a{
+       padding-top: 0px;
+        font-size: 14px;
+        color: #7E7E7E;
+        text-decoration: none;
+    }
+    #footerbowm a:first-child{
+        margin-left: 85px;
+    }
+    #footerbowm a:nth-child(2){
+        margin-left: 945px;
+    }
+    .foota{
+        margin-left: 20px;
+    }
+    #footerbowm img{
+        padding-top:10px;
+    }
+</style>
+<script src="../static/js/jquery.min.js"></script>
+<script type="text/javascript">
+    /*-----------------------------------------------头部js------------------------------------------------------*/
+    $(function () {
+        $("#wo").hide();
+        $(".k2").hover(function (){
+            $("#wo").show();
+        },function (){
+            $("#wo").hide();
+        });
+        $("#wo").hover(function (){
+            $("#wo").show();
+        },function (){
+            $("#wo").hide();
+        });
+
+        $("#help").hide();
+        $(".k3").hover(function (){
+            $("#help").show();
+        },function (){
+            $("#help").hide();
+        });
+        $("#help").hover(function (){
+            $("#help").show();
+        },function (){
+            $("#help").hide();
+        });
+
+    })
+    /*---------------------------------------------------------------------------------------------------------*/
+</script>
+<body>
+
+<header>
+    <ul id="wo">
+        <li id="lll"><a href="">收件箱</a></li>
+        <li><a href="">订单</a></li>
+        <li><a href="">收藏</a></li>
+        <li><a href="">活动</a></li>
+        <li><a href="">账户设置</a></li>
+        <li><a href="">注销</a></li>
+    </ul>
+    <ul id="help">
+        <li><a href="">我的订单</a></li>
+        <li><a href="">配送服务</a></li>
+        <li><a href="">退换货</a></li>
+        <li><a href="">使用条款</a></li>
+        <li><a href="">销售条款</a></li>
+        <li><a href="">隐私政策</a></li>
+        <li><a href="">联系我们</a></li>
+        <li><a href="">网站反馈</a></li>
+        <li><a href="">查看全部</a></li>
+    </ul>
+    <div id="toubu">
+        <img src="../static/images/buttons/nike.png" height="62" width="95"/>
+        <ul id="toubuUl">
+            <li class="k1">
+                <a class="shoye" href="">首页</a>
+            </li>
+            <li class="k2">
+                <a class="shoye"  href=""><img src="../static/images/buttons/User.png" height="37" width="79"/></a>
+
+            </li>
+            <li class="k3">
+                <a class="shoye"  href=""><img src="../static/images/buttons/bangzhu.png" height="35" width="52"/></a>
+
+            </li>
+            <li class="k4">
+                <a class="shoye"  href=""><img src="../static/images/buttons/liaotian.png" height="39" width="39"/></a>
+            </li>
+            <li class="k5">
+                <a class="shoye"  href=""><img src="../static/images/buttons/shopp.png" height="38" width="39"/></a>
+            </li>
+            <li class="k6">
+                <a class="shoye"  href=""><img src="../static/images/buttons/adress.png" height="36" width="93"/></a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<form>
+    <div class="dindang">
+        <div><span id="title">结算</span></div>
+        <div class="lefthtml">
+            <div>
+                <p id="neiron1">尊敬的客户，近期有一些不法分子假冒大品牌员工实施欺诈行为。为了您的帐户和财产安<br/>全，请不要相信此类信息，谨防被骗。</p>
+            </div>
+            <div>
+                <p id="neiron2">从现在开始，如果您需要开具抬头为法人、其他组织或其他自定义内容的发票，请拨打 <br/>Nike 中国客户服务热线：800-820-8865（固定电话）或 400-880-6453（手机）。<br/>
+                    为保护您的个人信息和财产安全，请在付款前确认配送信息。配送地址在订单提交后便无<br/>法更改。</p>
+            </div>
+            <div id="peison">
+                <p class="peisontitle">1.配送 <a class="bianjidiz" href="../../../../../consumer-8080/src/main/resources/static">编辑</a></p>
+
+                <div>
+                <p class="xdztitle">配送地址</p>
+                    <dd class="xdzdd">
+                        <dl>贺 大大 13142064861</dl>
+                        <dl>1972846703@qq.com</dl>
+                        <dl>湖南省 长沙市 开福区 蔡锷陆</dl>
+                    </dd>
+                    <br/>
+                    <h5 class="xdztime">预计在9月30日星期一前送达</h5>
+                </div>
+            </div>
+            <br/>
+            <div class="xzfukuan">
+                <p class="peisontitle">2.付款</p>
+                <input type="button" class="zfb">
+                <input type="button" class="weixin">
+                <input type="button" class="yhk">
+                <hr/>
+                <p class="fukuantishi">订单提交前，请再次确认配送信息、账单信息和已选购商品。请确保您的浏览器中“屏蔽弹出窗口”的功能已关闭，以正常浏览本网站的支付弹出窗口。</p>
+                <input type="button" class="xiadan">
+            </div>
+        </div>
+
+        <div class="rigthhtml">
+            <div class="body2">
+                <p class="zaiyaotitle">摘要</p>
+                    <dd id="dd2">
+                        <dl class="e">小计：<span id="H1"><span>￥200.00</span></span></dl>
+                        <dl class="e">预计配送和处理：<span id="H2"> <span>￥0.00</span></span></dl>
+                        <dl class="e">总计：<span id="H3"><span>￥500.00</span></span></dl>
+                    </dd>
+
+            </div>
+            <div class="body3">
+                <div><p class="zaiyaotitle">在你的购物车中<a href="../static" id="Edit">Edit</a></p><div>
+                <div class="shopp1">
+                    <img src="../static/images/buttons/鞋子.png" height="100" width="100"/>
+                </div>
+                <div class="shopp2">
+                        <dd class="shopp-dd">
+                            <dl class="e2" ><h5 name="name">Nike Air Max 270 React</h5></dl>
+                            <dl class="e2">款式编号<span name="bianhao">CD0458-090</span></dl>
+                            <dl class="e2">尺码：<span name="size">42.5</span></dl>
+                            <dl class="e2"><span name="color">翡翠绿/微黄绿/湖蓝/泷杉木绿</span></dl>
+                            <dl class="e2">数量：<span name="nums">1</span>&nbsp;&nbsp;<span name="danjia">￥1399.00</span></dl>
+                            <dl class="e2"><span name="nums">1399.00</span></dl>
+                        </dd>
+                </div>
+                <br/>
+
+                        <div class="shopp1">
+                            <img src="../static/images/buttons/鞋子.png" height="100" width="100"/>
+                        </div>
+                        <div class="shopp2">
+                            <dd class="shopp-dd">
+                                <dl class="e2" ><h5 name="name">Nike Air Max 270 React</h5></dl>
+                                <dl class="e2">款式编号<span name="bianhao">CD0458-090</span></dl>
+                                <dl class="e2">尺码：<span name="size">42.5</span></dl>
+                                <dl class="e2"><span name="color">翡翠绿/微黄绿/湖蓝/泷杉木绿</span></dl>
+                                <dl class="e2">数量：<span name="nums">1</span>&nbsp;&nbsp;<span name="danjia">￥1399.00</span></dl>
+                                <dl class="e2"><span name="nums">1399.00</span></dl>
+                            </dd>
+                        </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+</form>
+<footer id="footer">
+    <div id="footerunder">
+    <dd id="footul1">
+        <dl><a href="">电子礼品卡</a></dl>
+        <dl><a href="">企业团购</a></dl>
+        <dl><a href="">附近商店</a></dl>
+        <dl><a href="">订阅电子邮件</a></dl>
+        <dl><a href="">注册NIKE会员</a></dl>
+        <dl><a href="">网站反馈</a></dl>
+    </dd>
+    <dd id="footul2">
+        <dl ><a  style="color: white;font-size: 15px" href="">获取帮助</a></dl>
+        <dl><a href="">订单状态</a></dl>
+        <dl><a href="">配送方式</a></dl>
+        <dl><a href="">退换货</a></dl>
+        <dl><a href="">付款选项</a></dl>
+        <dl><a href="">联系我们</a></dl>
+    </dd>
+    <dd id="footul3">
+        <dl><a  style="color: white;font-size: 15px" href="">关于Nike</a></dl>
+        <dl><a href="">新闻</a></dl>
+        <dl><a href="">投资者</a></dl>
+        <dl><a href="">招贤纳士</a></dl>
+        <dl><a href="">新品预览</a></dl>
+    </dd>
+    </div>
+    <br/>
+    <div id="footerbowm">
+        <hr/>
+        <p>
+            <a href="">@2019 Nike,Inc .保留所以权利</a>
+            <a href="" class="foota">分类浏览</a>
+            <a href="" class="foota">使用条款</a>
+            <a href="" class="foota">销售条款</a>
+            <a href="" class="foota">隐私政策</a>
+            <a href="" class="foota">沪ICP备14009339号</a>
+            <a href="" class="foota"><img src="../static/images/buttons/biaozi.png" height="18" width="23"/>上海工商</a>
+        </p>
+    </div>
+
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

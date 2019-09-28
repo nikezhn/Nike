@@ -16,4 +16,16 @@
         <result column="np_color_count" property="np_color_count" />
     </resultMap>
 
+    <!--查询8件商品信息;-->
+    <select id="productLimit" parameterType="int" resultMap="BaseResultMap">
+        SELECT * FROM nike_product
+        <where>
+            <if test = "npc_two_id != 0">
+                npc_two_id=#{npc_two_id}
+            </if>
+        </where>
+        LIMIT 8
+
+    </select>
+
 </mapper>

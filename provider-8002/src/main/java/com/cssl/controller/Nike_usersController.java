@@ -3,6 +3,7 @@ package com.cssl.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author aguang
  * @since 2019-09-24
  */
-@Controller
+@RestController
 @RequestMapping("/nike_users")
 public class Nike_usersController {
 

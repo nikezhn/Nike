@@ -14,4 +14,9 @@
         <result column="nt_price" property="nt_price" />
     </resultMap>
 
+    <!-- 根据用户购物车查询 -->
+    <select id="trolleyUn_id" parameterType="int" resultMap="BaseResultMap">
+        SELECT * FROM nike_trolley where nu_id=#{uid}
+    </select>
+
 </mapper>

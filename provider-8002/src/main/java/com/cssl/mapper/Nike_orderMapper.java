@@ -1,7 +1,6 @@
 package com.cssl.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.cssl.pojo.Nike_order;
 
 /**
  * <p>
