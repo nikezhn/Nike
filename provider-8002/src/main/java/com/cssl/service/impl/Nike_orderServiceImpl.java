@@ -2,6 +2,7 @@ package com.cssl.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cssl.mapper.Nike_orderMapper;
+import com.cssl.pojo.Nike_order;
 import com.cssl.service.INike_orderService;
 import org.springframework.stereotype.Service;
 

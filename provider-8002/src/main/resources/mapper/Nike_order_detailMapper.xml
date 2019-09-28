@@ -3,7 +3,7 @@
 <mapper namespace="com.cssl.mapper.Nike_order_detailMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.cssl.entity.Nike_order_detail">
+    <resultMap id="BaseResultMap" type="com.cssl.pojo.Nike_order_detail">
         <id column="nod_id" property="nod_id" />
         <result column="no_id" property="no_id" />
         <result column="np_id" property="np_id" />
