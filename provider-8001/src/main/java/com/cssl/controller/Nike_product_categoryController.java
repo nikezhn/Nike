@@ -6,6 +6,7 @@ import com.cssl.service.INike_product_categoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ import java.util.List;
  * @author aguang
  * @since 2019-09-24
  */
-@Controller
+@RestController
 @RequestMapping("/nike_product_category")
 public class Nike_product_categoryController {
 
@@ -25,9 +26,9 @@ public class Nike_product_categoryController {
     INike_product_categoryService iNike_product_categoryService;
 
     @RequestMapping("/findAll")
-    public List<Nike_product_category> findAll(){
-        System.out.println("进入后台nike_product_category的findAll方法");
-        return iNike_product_categoryService.list();
+    public List<Nike_product_category> findNike_product_category(){
+        System.out.println("进入后台nike_product_category的findNike_product_category方法");
+        return iNike_product_categoryService.findNike_product_category();
     }
 
     @RequestMapping("/add")
@@ -47,4 +48,6 @@ public class Nike_product_categoryController {
         System.out.println("进入后台nike_product_category的del方法");
         return iNike_product_categoryService.removeById(id);
     }
+
+
 }

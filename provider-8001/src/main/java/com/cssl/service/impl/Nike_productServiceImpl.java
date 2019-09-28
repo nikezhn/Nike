@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cssl.mapper.Nike_productMapper;
 import com.cssl.pojo.Nike_product;
 import com.cssl.service.INike_productService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * <p>
@@ -17,4 +20,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class Nike_productServiceImpl extends ServiceImpl<Nike_productMapper, Nike_product> implements INike_productService {
 
+    @Autowired
+    Nike_productMapper nike_productMapper;
+
+    public List<Nike_product> findNike_product(String np_name) {
+        return nike_productMapper.findNike_product(np_name);
+    }
 }
