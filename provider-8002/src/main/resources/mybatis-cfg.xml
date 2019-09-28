@@ -8,6 +8,10 @@
 	<settings>
 		<setting name="cacheEnabled" value="true" />
 	</settings>
+	<!-- spring xml 方式 -->
+	<plugins>
+		<plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"/>
+	</plugins>
 
 </configuration>
 

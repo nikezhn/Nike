@@ -1,5 +1,7 @@
 package com.cssl.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cssl.pojo.Nike_color;
 import com.cssl.pojo.Nike_product;
 import com.cssl.pojo.Nike_trolley;
@@ -23,11 +25,21 @@ public class NikeControll {
 
     //首页;
     @RequestMapping("/Nikefront")
-    public String frontIndex(@RequestParam(defaultValue = "0") int npc_two_id,
+    public String frontIndex(@RequestParam(defaultValue = "1") int pageCurrent,
+                              @RequestParam(defaultValue = "0") int npc_two_id,
                               @RequestParam(defaultValue = "0") int uid,
                               Model model){
 
         System.out.println("hahah");
+        /*System.out.println("8081:Nikefront-->selectPageVo-->productLimit");
+        Page page=new Page();
+        page.setCurrent(1);
+        page.setSize(2);
+        IPage<Nike_product> productIPage=nike_ClientService.productPage(page);
+        for (Nike_product product:productIPage.getRecords()){
+            System.out.println("product:"+product);
+        }
+        System.out.println("11111111111111111111111111111111");*/
         //查询所有商品信息;
         System.out.println("8081:Nikefront-->NikeControll-->productLimit");
         List<Nike_product> productList=nike_ClientService.productLimit(npc_two_id);
@@ -47,9 +59,9 @@ public class NikeControll {
         //根据用户查询购物车数量
         model.addAttribute("trolleyCount",trolleyList.size());
         //商品数量
-        model.addAttribute("productCount",productList.size());
+        //model.addAttribute("productCount",productList.size());
 
-        model.addAttribute("productList",productList);
+        //model.addAttribute("productList",productList);
         model.addAttribute("trolleyList",trolleyList);
         model.addAttribute("colorList",colorList);
 

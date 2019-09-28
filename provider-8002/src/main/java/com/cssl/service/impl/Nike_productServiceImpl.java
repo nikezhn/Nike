@@ -1,5 +1,7 @@
 package com.cssl.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cssl.mapper.Nike_productMapper;
 import com.cssl.pojo.Nike_product;
@@ -28,5 +30,11 @@ public class Nike_productServiceImpl extends ServiceImpl<Nike_productMapper, Nik
 
         System.out.println("8002-->Nike_productServiceImpl-->productLimit");
         return nike_productMapper.productLimit(npc_two_id);
+    }
+
+    //分页
+    public IPage<Nike_product> productPage(Page page) {
+
+        return nike_productMapper.productPage(page);
     }
 }
