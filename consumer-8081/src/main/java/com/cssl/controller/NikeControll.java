@@ -27,6 +27,7 @@ public class NikeControll {
                               @RequestParam(defaultValue = "0") int uid,
                               Model model){
 
+        System.out.println("hahah");
         //查询所有商品信息;
         System.out.println("8081:Nikefront-->NikeControll-->productLimit");
         List<Nike_product> productList=nike_ClientService.productLimit(npc_two_id);
