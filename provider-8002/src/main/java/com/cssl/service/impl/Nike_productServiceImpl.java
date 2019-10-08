@@ -32,4 +32,9 @@ public class Nike_productServiceImpl extends ServiceImpl<Nike_productMapper, Nik
         return nike_productMapper.productLimit(npc_two_id);
     }
 
+    //分页
+    public IPage<Nike_product> productPage(Page page) {
+
+        return nike_productMapper.productPage(page);
+    }
 }
