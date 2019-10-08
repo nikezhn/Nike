@@ -28,7 +28,7 @@ public class Nike_productController {
 
     //查询8件商品信息;
     @RequestMapping("/productLimit")
-    public List<Nike_product> productLimit(int npc_two_id){
+    public List<Nike_product> productLimit(int npc_two_id) {
 
         System.out.println("8002-->Nike_productController-->productLimit");
         return iNike_productService.productLimit(npc_two_id);
@@ -36,16 +36,24 @@ public class Nike_productController {
 
     //分页;
     @RequestMapping("/productPage")
-    public IPage<Nike_product> productPage(Page page){
+    public IPage<Nike_product> productPage(Page page) {
 
         System.out.println("8002-->Nike_productController-->productPage");
         IPage<Nike_product> productIPage = iNike_productService.productPage(page);
-        System.out.println("长度:"+productIPage.getSize());
-        for (Nike_product product:productIPage.getRecords()){
-            System.out.println("product:"+product);
+        System.out.println("长度:" + productIPage.getSize());
+        for (Nike_product product : productIPage.getRecords()) {
+            System.out.println("product:" + product);
         }
 
         return productIPage;
+    }
+
+    //购物车
+    @RequestMapping("/prodectdeatil")
+    public Nike_product productDeatilByid(int id) {
+        System.out.println("8002-->Nike_productController-->productDeatilByid");
+        Nike_product nike_product = iNike_productService.productDeatilByid(id);
+        return  nike_product;
     }
 
 }

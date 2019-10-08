@@ -31,5 +31,8 @@
     <select id="productPage" resultMap="BaseResultMap">
         select * from nike_product
     </select>
-
+     <!--************购物车*******************-->
+    <select id="productDeatilByid" resultMap="BaseResultMap">
+        SELECT * FROM `nike`.`nike_product` WHERE np_id=1
+    </select>
 </mapper>

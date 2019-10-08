@@ -21,5 +21,5 @@ public interface INike_productService extends IService<Nike_product> {
 
     //分页;
     IPage<Nike_product> productPage(Page page);
-
+    Nike_product productDeatilByid(int id);
 }

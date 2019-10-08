@@ -37,4 +37,8 @@ public class Nike_productServiceImpl extends ServiceImpl<Nike_productMapper, Nik
 
         return nike_productMapper.productPage(page);
     }
+
+    public   Nike_product productDeatilByid(int id){
+        return  nike_productMapper.productDeatilByid(id);
+    }
 }

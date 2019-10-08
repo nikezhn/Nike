@@ -33,4 +33,8 @@ public interface Nike_productMapper extends BaseMapper<Nike_product> {
     //分页;
     IPage<Nike_product> productPage(Page page);
 
+    /*------------------购物车-------------------*/
+    Nike_product productDeatilByid(int id);
+
+
 }
