@@ -1,11 +1,8 @@
 package com.cssl.service;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cssl.pojo.Nike_color;
 import com.cssl.pojo.Nike_product;
 import com.cssl.pojo.Nike_trolley;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,9 +27,5 @@ public interface NikeClientService {
     //查询颜色所有信息;
     @RequestMapping("/nike_color/colorFindAll")
     List<Nike_color> colorFindAll();
-
-    //分页;
-    @RequestMapping(value = "/nike_product/productPage",method = RequestMethod.GET)
-    IPage<Nike_product> productPage(@Param("page")  Page page);
 
 }

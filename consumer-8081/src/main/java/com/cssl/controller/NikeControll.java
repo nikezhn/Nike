@@ -1,7 +1,5 @@
 package com.cssl.controller;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cssl.pojo.Nike_color;
 import com.cssl.pojo.Nike_product;
 import com.cssl.pojo.Nike_trolley;
@@ -11,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /*
@@ -25,29 +23,23 @@ public class NikeControll {
 
     //首页;
     @RequestMapping("/Nikefront")
-    public String frontIndex(@RequestParam(defaultValue = "1") int pageCurrent,
-                              @RequestParam(defaultValue = "0") int npc_two_id,
-                              @RequestParam(defaultValue = "0") int uid,
-                              Model model){
+    public String frontIndex(@RequestParam(defaultValue = "0") int npc_two_id,
+                             @RequestParam(defaultValue = "0") int uid,
+                             Model model,
+                             HttpSession session){
 
-        System.out.println("hahah");
-        /*System.out.println("8081:Nikefront-->selectPageVo-->productLimit");
-        Page page=new Page();
-        page.setCurrent(1);
-        page.setSize(2);
-        IPage<Nike_product> productIPage=nike_ClientService.productPage(page);
-        for (Nike_product product:productIPage.getRecords()){
-            System.out.println("product:"+product);
-        }
-        System.out.println("11111111111111111111111111111111");*/
+        //获取用户编号;
+        session.setAttribute("uid",1);
+
         //查询所有商品信息;
+        System.out.println("id:"+npc_two_id);
         System.out.println("8081:Nikefront-->NikeControll-->productLimit");
         List<Nike_product> productList=nike_ClientService.productLimit(npc_two_id);
         /*for (Nike_product product:productList){ System.out.println("product:"+product); }*/
 
         //根据用户编号查询购物车;
         System.out.println("8081:Nikefront-->NikeControll-->trolleyUn_id");
-        List<Nike_trolley> trolleyList=nike_ClientService.trolleyUn_id(uid);
+        List<Nike_trolley> trolleyList=nike_ClientService.trolleyUn_id(Integer.parseInt(session.getAttribute("uid").toString()));
         /*for (Nike_trolley trolley:trolleyList){ System.out.println("trolley:"+trolley); }*/
 
         //查询颜色所有信息;
@@ -59,9 +51,9 @@ public class NikeControll {
         //根据用户查询购物车数量
         model.addAttribute("trolleyCount",trolleyList.size());
         //商品数量
-        //model.addAttribute("productCount",productList.size());
+        model.addAttribute("productCount",productList.size());
 
-        //model.addAttribute("productList",productList);
+        model.addAttribute("productList",productList);
         model.addAttribute("trolleyList",trolleyList);
         model.addAttribute("colorList",colorList);
 

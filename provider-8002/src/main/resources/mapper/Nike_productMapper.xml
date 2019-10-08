@@ -28,8 +28,4 @@
 
     </select>
 
-    <select id="productPage" resultMap="BaseResultMap">
-        select * from nike_product
-    </select>
-
 </mapper>

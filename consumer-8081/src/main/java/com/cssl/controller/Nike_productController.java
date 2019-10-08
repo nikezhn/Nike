@@ -16,8 +16,8 @@ public class Nike_productController {
     @Autowired
     NikeClientService nike_ClientService;
 
-    /*//查询所有商品信息;
-    @RequestMapping("/nike_product/productFindAll")
+    //查询所有商品信息;
+    /*@RequestMapping("/nike_product/productFindAll")
     public String productFindAll(){
 
         System.out.println("8081-->Nike_productController-->productFindAll");
