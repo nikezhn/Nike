@@ -63,7 +63,7 @@ public class NikeControll {
     @RequestMapping("/kdb")
     public String method(){
 
-        return "kk";
+        return "product-listing";
     }
 
 }
