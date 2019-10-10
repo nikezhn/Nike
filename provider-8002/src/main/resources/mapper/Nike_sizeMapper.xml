@@ -10,4 +10,9 @@
         <result column="ns_repertory" property="ns_repertory" />
     </resultMap>
 
+    <!--根据颜色编号查询尺码-->
+    <select id="sizeList" parameterType="int" resultMap="BaseResultMap">
+        SELECT * FROM nike_size WHERE nc_id=#{nc_id}
+    </select>
+
 </mapper>

@@ -12,4 +12,9 @@
         <result column="nc_sales" property="nc_sales" />
     </resultMap>
 
+    <!--根据商品编号查询颜色;-->
+    <select id="colorSingle" parameterType="int" resultMap="BaseResultMap">
+        select * from nike_color where np_id=#{np_id}
+    </select>
+
 </mapper>

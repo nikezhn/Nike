@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cssl.mapper.Nike_colorMapper;
 import com.cssl.pojo.Nike_color;
 import com.cssl.service.INike_colorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * <p>
@@ -16,5 +19,15 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class Nike_colorServiceImpl extends ServiceImpl<Nike_colorMapper, Nike_color> implements INike_colorService {
+
+    @Autowired
+    Nike_colorMapper nike_colorMapper;
+
+    //根据商品编号查询颜色;
+    public List<Nike_color> colorSingle(int np_id) {
+
+        System.out.println("8002-->Nike_colorServiceImpl-->colorSingle");
+        return nike_colorMapper.colorSingle(np_id);
+    }
 
 }

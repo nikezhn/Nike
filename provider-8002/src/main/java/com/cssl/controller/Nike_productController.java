@@ -1,14 +1,10 @@
 package com.cssl.controller;
 
-
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cssl.pojo.Nike_product;
 import com.cssl.service.INike_productService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.List;
 
 /**
@@ -34,18 +30,28 @@ public class Nike_productController {
         return iNike_productService.productLimit(npc_two_id);
     }
 
-    //分页;
-    @RequestMapping("/productPage")
-    public IPage<Nike_product> productPage(Page page){
+    //查询所有商品信息;
+    @RequestMapping("/productList")
+    public List<Nike_product> productList() {
 
-        System.out.println("8002-->Nike_productController-->productPage");
-        IPage<Nike_product> productIPage = iNike_productService.productPage(page);
-        System.out.println("长度:"+productIPage.getSize());
-        for (Nike_product product:productIPage.getRecords()){
-            System.out.println("product:"+product);
-        }
+        System.out.println("8002-->Nike_productController-->productList");
+        return iNike_productService.list();
+    }
 
-        return productIPage;
+    //查询单个商品;
+    @RequestMapping("/productSingle")
+    public Nike_product productSingle(int np_id) {
+
+        System.out.println("8002-->Nike_productController-->productSingle");
+        return iNike_productService.productSingle(np_id);
+    }
+
+    //查询有关用户喜欢的商品;
+    @RequestMapping("/userLikeProduct")
+    public List<Nike_product> userLikeProduct(int npc_two_id, int np_id) {
+
+        System.out.println("8002-->Nike_productController-->userLikeProduct");
+        return iNike_productService.userLikeProduct(npc_two_id,np_id);
     }
 
 }

@@ -28,8 +28,14 @@
 
     </select>
 
-    <select id="productPage" resultMap="BaseResultMap">
-        select * from nike_product
+    <!--查询单个商品信息-->
+    <select id="productSingle" parameterType="int" resultMap="BaseResultMap">
+        select * from nike_product where np_id=#{np_id}
+    </select>
+
+    <!--查询有关用户喜欢的商品;-->
+    <select id="userLikeProduct" parameterType="int" resultMap="BaseResultMap">
+        SELECT * FROM nike_product WHERE npc_two_id=#{npc_two_id} AND np_id!=#{np_id}
     </select>
 
 </mapper>

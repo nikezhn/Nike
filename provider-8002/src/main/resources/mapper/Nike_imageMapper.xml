@@ -9,4 +9,9 @@
         <result column="nc_id" property="nc_id" />
     </resultMap>
 
+    <!--根据颜色编号查询图片;-->
+    <select id="imageList" parameterType="int" resultMap="BaseResultMap">
+        SELECT * FROM nike_image WHERE nc_id=#{nc_id}
+    </select>
+
 </mapper>

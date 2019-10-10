@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cssl.pojo.Nike_product;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -30,7 +31,13 @@ public interface Nike_productMapper extends BaseMapper<Nike_product> {
     //查询8件商品信息;
     List<Nike_product> productLimit(int npc_two_id);
 
-    //分页;
-    IPage<Nike_product> productPage(Page page);
+    //查询所有商品信息;
+    List<Nike_product> productList(int np_id);
+
+    //查询单个商品;
+    Nike_product productSingle(int np_id);
+
+    //查询有关用户喜欢的商品;
+    List<Nike_product> userLikeProduct(@Param("npc_two_id") int npc_two_id,@Param("np_id") int np_id);
 
 }
